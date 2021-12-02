@@ -1,5 +1,6 @@
 mod puzzle_1;
 mod puzzle_2;
+
 use std::env;
 use std::process;
 
@@ -9,12 +10,13 @@ fn main() {
     match puzzle.as_ref().map(|s| &s[..]) {
         Some("1") => {
             puzzle_1::puzzle();
-        }
+        } 
+
         Some("2") => {
             puzzle_2::puzzle();
         }
         Some(other) => {
-            eprintln!("unknown puzzle: {:}", other);
+            eprintln!("unknown puzzle: {:?}", other);
             process::exit(1);
         }
         None => {

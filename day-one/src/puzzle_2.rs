@@ -12,7 +12,7 @@ enum Measurement {
     Decreased
 }
 
-pub fn puzzle_two() {
+pub fn puzzle() {
    let path = env::args().last().unwrap().to_string(); 
    let path = path::Path::new(&path);
    let file = io::BufReader::new(fs::File::open(&path).unwrap());
